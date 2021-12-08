@@ -432,43 +432,90 @@ $(document).ready(function () {
       zoomWindowFadeOut: 500,
     });
   }
-
- 
 });
- // Remove Product tr
- $(".remove").on("click", function (event) {
+// Remove Product tr
+$(".remove").on("click", function (event) {
   $(this).parent().parent().parent().parent().remove();
 });
- 
- // Remove Address div
- $(".btn-remove-address").on("click", function (event) {
+
+// Remove Address div
+$(".btn-remove-address").on("click", function (event) {
   $(this).parent().parent().parent().remove();
 });
- 
+
+// Accordian
+const accor = document.querySelectorAll(".accordion-title");
+accor.forEach((item) => {
+  item.addEventListener("click", function () {
+    item.classList.toggle("active");
+    const content = item.nextElementSibling;
+    if (content.style.height) {
+      content.style.height = null;
+    } else {
+      content.style.height = content.scrollHeight + "px";
+    }
+  });
+});
+
+
+
+[
+  // prettier-ignore
+  {supported: 'Symbol' in window, fill: 'https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js'},
+      {supported: 'Promise' in window, fill: 'https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js'},
+      {supported: 'fetch' in window, fill: 'https://cdn.jsdelivr.net/npm/fetch-polyfill@0.8.2/fetch.min.js'},
+      {supported: 'CustomEvent' in window && 'log10' in Math && 'sign' in Math &&  'assign' in Object &&  'from' in Array &&
+                  ['find', 'findIndex', 'some', 'includes'].reduce(function(previous, prop) { return (prop in Array.prototype) ? previous : false; }, true), fill: 'https://unpkg.com/filepond-polyfill/dist/filepond-polyfill.js'}
+].forEach(function (p) {
+  if (p.supported) return;
+  document.write('<script src="' + p.fill + '"></script>');
+});
+
+
+
+    // Get a reference to the file input element
+    const inputElement = document.querySelector('input[type="file"]');
+
+    // Create the FilePond instance
+    const pond = FilePond.create(inputElement, {
+        allowMultiple: true,
+        allowReorder: true,
+    });
+
+    // Easy console access for testing purposes
+    window.pond = pond;
+
+
+    // We want to preview images, so we register
+// the Image Preview plugin, We also register 
+// exif orientation (to correct mobile image
+// orientation) and size validation, to prevent
+// large files from being added
+FilePond.registerPlugin(
+  FilePondPluginImagePreview,
+  FilePondPluginImageExifOrientation,
+  FilePondPluginFileValidateSize,
+  FilePondPluginImageEdit
+);
+
+// Select the file input and use 
+// create() to turn it into a pond
+FilePond.create(
+  document.querySelector('input')
+);
+
+// How to use with Pintura Image Editor:
+// https://pqina.nl/pintura/docs/latest/getting-started/installation/filepond/
 
 // Live Character
-let textArea = document.querySelector('#textarea');
-let count = document.querySelector('.count');
+let textArea = document.querySelector("#textarea");
+let count = document.querySelector(".count");
 
 let charLength;
 
-textArea.addEventListener('input',() =>{
-  charLength = textArea.value.length;
-  count.innerText = charLength;
-})
+textArea
+  .addEventListener("input", () => {
+    charLength = textArea.value.length;
+    count.innerText = charLength;
+  })
 
-document.multiselect('#testSelect1')
-.setCheckBoxClick("checkboxAll", function(target, args) {
-  console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
-})
-.setCheckBoxClick("1", function(target, args) {
-  console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
-});
-
-function enable() {
-document.multiselect('#testSelect1').setIsEnabled(true);
-}
-
-function disable() {
-document.multiselect('#testSelect1').setIsEnabled(false);
-}
