@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/vendor/noUISlider.min.css">
     <link rel="stylesheet" href="assets/css/vendor/nice-select.css">
-    <link rel="stylesheet" href="assets/css/vendor/filepond.css">
+
     <!-- main-style---------------------------------->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -678,7 +678,6 @@
                                                 خروج
                                             </a>
                                         </li>
-
                                     </ul>
                                 </section>
                             </div>
@@ -686,67 +685,74 @@
                         <div class="col-lg-9 col-md-9 col-xs-12 pl">
                             <div class="profile-content">
                                 <div class="box-header col-12 mb-5">
-                                    <span class="box-title">ارسال تیکت جدید</span>
+                                    <span class="box-title">تیکت ها</span>
                                 </div>
                                 <div class="profile-stats">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
-                                        طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
-                                        لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
-                                        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
-                                        شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
-                                        طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد،
-                                        در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
-                                        سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی
-                                        سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                                    </p>
-                                    <div class="d-flex flex-wrap align-items-center justify-content-between">
-                                        <div class="col-5">
-                                            <label for="">دپارتمان را انتخاب کنید</label>
-                                            <select name="" class="form-control" id="">
-                                                <option value="وضعیت سفارش">وضعیت سفارش</option>
-                                                <option value="">پشتیبانی</option>
-                                                <option value="">مالی</option>
-                                                <option value="">اداری</option>
-                                            </select>
+                                    <div class="d-flex align-items-center justify-content-between pb-5">
+                                        <div class="send-btn">
+                                            <a href="send-ticket.html" class="send-btnbtn mt-4 px-3 py-2">ارسال تیکت جدید </a>
                                         </div>
-                                        <div class="col-5">
-                                            <label for="">زبان ارتباط</label>
-                                            <select name="" class="form-control" id="">
-                                                <option value="فارسی">فارسی</option>
-                                                <option value="">English</option>
-                                                <option value="">Arabic</option>
-                                            </select>
+                                        <div class="col-5 d-flex align-items-center">
+                                            <p>فیلتر</p>
+                                            <input type="text" class="form-control mr-3" name="" id="" placeholder="جستجو براساس دسته بندی یا نام محصول">
                                         </div>
-                                        <div class="col-5">
-                                            <label for="">شماره سفارش</label>
-                                            <input type="tel" class="form-control"
-                                                oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                                    </div>
+                                    <div class="all-orders-tab ">
+                                        <div class="table-orders table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">شناسه</th>
+                                                        <th scope="col">نام محصول</th>
+                                                        <th scope="col">سفارش</th>
+                                                        <th scope="col">دسته بندی</th>
+                                                        <th scope="col">ایجاد شده</th>
+                                                        <th scope="col">اخرین پاسخ</th>
+                                                        <th scope="col">وضعیت</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row"><span>#12</span></th>
+                                                        <td><span> اسم محصول</span>
+                                                        </td>
+                                                        <td><span>2545852</span></td>
+                                                            <td><span>دپارتمان</span></td>
+                                                            <td><span>14 آبان 1400</span></td>
+                                                            <td><span>پاسخ داده شده </span></td>
+                                                        <td><a href="#"
+                                                                class="btn btn-warning px-3 py-1">درحال بررسی</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><span>#12</span></th>
+                                                        <td><span> اسم محصول</span>
+                                                        </td>
+                                                        <td><span>2545852</span></td>
+                                                            <td><span>دپارتمان</span></td>
+                                                            <td><span>14 آبان 1400</span></td>
+                                                            <td><span>پاسخ داده شده </span></td>
+                                                        <td><a href="#"
+                                                                class="btn btn-success px-3 py-1">پاسخ داده شده</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><span>#12</span></th>
+                                                        <td><span> اسم محصول</span>
+                                                        </td>
+                                                        <td><span>2545852</span></td>
+                                                            <td><span>دپارتمان</span></td>
+                                                            <td><span>14 آبان 1400</span></td>
+                                                            <td><span>پاسخ داده شده </span></td>
+                                                        <td><a href="#"
+                                                                class="btn btn-danger px-3 py-1">رد شده</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                        <div class="col-5">
-                                            <label for="">موضوع سفارش</label>
-                                            <input type="text" class="form-control"
-                                                oninput="this.value=this.value.replace(/[^A-Z^a-z^ا-ی]/g,'')">
-                                        </div>
-                                        <div class="col-12">
-                                            <label for="">نام محصول</label>
-                                            <input type="text" class="form-control"
-                                                oninput="this.value=this.value.replace(/[^A-Z^a-z^ا-ی]/g,'')">
-                                        </div>
-                                        <div class="col-12">
-                                            <label for="">متن پیام</label>
-                                            <textarea name="" id="" cols="30" rows="10" class="form-control"
-                                                placeholder="پیام خود را اینجا وارد کنید..."></textarea>
-                                        </div>
-                                        <div class="col-5">
-                                            <input type="file" class="filepond" name="filepond" multiple
-                                                data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
             </section>
         </div>
     </div>
@@ -769,7 +775,8 @@
                                 <span class="icon-shopping">
                                     <img src="assets/images/footer/Group 66.png" alt="">
                                 </span>
-                                <p class="title-shopping">پشتیبانی ۲۴ ساعته</p>
+                                <p class="title-shopping">پشتیبانی ۲۴ ساعته
+                                </p>
                             </div>
                             <div class="item-footer">
                                 <span class="icon-shopping">
@@ -781,7 +788,8 @@
                                 <span class="icon-shopping">
                                     <img src="assets/images/footer/Group 68.png" alt="">
                                 </span>
-                                <p class="title-shopping">۷ روز ضمانت بازگشت</p>
+                                <p class="title-shopping">۷ روز ضمانت بازگشت
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -795,16 +803,34 @@
                                 <div class="col-lg-12 pr">
                                     <div class="footer-content d-block">
                                         <div class="text pr-1">
-                                            <h2 class="title">فروشگاه اینترنتی مالتین</h2>
-                                            <p class="desc"> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
-                                                و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-                                                ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
-                                                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
-                                                شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
-                                                طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
-                                                طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
-                                                امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
-                                                پایان رسد و زمان مورد .....</p>
+                                            <h2 class="title">فروشگاه
+                                                اینترنتی مالتین</h2>
+                                            <p class="desc"> لورم ایپسوم متن
+                                                ساختگی با تولید سادگی
+                                                نامفهوم از صنعت چاپ،
+                                                و با استفاده از طراحان
+                                                گرافیک است، چاپگرها و متون
+                                                بلکه روزنامه و مجله در
+                                                ستون و سطرآنچنان که لازم
+                                                است، و برای شرایط فعلی
+                                                تکنولوژی مورد نیاز، و
+                                                کاربردهای متنوع با هدف بهبود
+                                                ابزارهای کاربردی می باشد،
+                                                کتابهای زیادی در
+                                                شصت و سه درصد گذشته حال و
+                                                آینده، شناخت فراوان جامعه و
+                                                متخصصان را می
+                                                طلبد، تا با نرم افزارها
+                                                شناخت بیشتری را برای طراحان
+                                                رایانه ای علی الخصوص
+                                                طراحان خلاقی، و فرهنگ پیشرو
+                                                در زبان فارسی ایجاد کرد، در
+                                                این صورت می توان
+                                                امید داشت که تمام و دشواری
+                                                موجود در ارائه راهکارها، و
+                                                شرایط سخت تایپ به
+                                                پایان رسد و زمان مورد .....
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -855,7 +881,8 @@
                                                 <ul class="footer-menu-ul">
                                                     <li class="menu-item-type-custom">
                                                         <a href="#">
-                                                            پرسش&zwnj;های متداول
+                                                            پرسش&zwnj;های
+                                                            متداول
                                                         </a>
                                                     </li>
                                                     <li class="menu-item-type-custom">
@@ -883,7 +910,11 @@
                                                 <ul class="footer-menu-ul">
                                                     <li class="menu-item-type-custom">
                                                         <a href="#">
-                                                            ایران-تهران- خیابان پیروزی-خیابان بیمارستان فجر-شهرک کوی
+                                                            ایران-تهران-
+                                                            خیابان
+                                                            پیروزی-خیابان
+                                                            بیمارستان
+                                                            فجر-شهرک کوی
                                                             انقلاب
                                                         </a>
                                                     </li>
@@ -927,7 +958,9 @@
                             </div>
                             <div class="col-lg-3 d-block pl">
                                 <div class="shortcode-widget-area">
-                                    <span class="form-newsletter-title"> گیفت کارت در شبکه های اجتماعی </span>
+                                    <span class="form-newsletter-title">
+                                        گیفت کارت در شبکه های اجتماعی
+                                    </span>
                                     <ul class="d-flex ">
                                         <li>
                                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -947,7 +980,8 @@
 
                             <div class="footer-copyright">
                                 <div class="footer-copyright-text">
-                                    <p>تمامی مطالب، عکس ها و... متعلق به سایت فروشگاهی مالتین می باشد.</p>
+                                    <p>تمامی مطالب، عکس ها و... متعلق به
+                                        سایت فروشگاهی مالتین می باشد.</p>
                                 </div>
                             </div>
                         </div>
@@ -977,7 +1011,6 @@
 <script src="assets/js/vendor/nouislider.min.js"></script>
 <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="assets/js/vendor/filepond.js"></script>
 <!-- main js---------------------------------------------------->
 <script src="assets/js/main.js"></script>
 

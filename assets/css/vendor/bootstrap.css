@@ -2757,8 +2757,8 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
 }
 
 .btn-success:hover {
@@ -2833,8 +2833,8 @@ fieldset:disabled a.btn {
 
 .btn-warning {
   color: #fff;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
 }
 
 .btn-warning:hover {

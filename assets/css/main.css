@@ -5089,7 +5089,7 @@ span.shipping-destination {
 }
 
 .profile-edit-action a {
-  background-color: var(--blue);
+  background-color: var(--purple);
   padding: 6px 10px;
   color: #fff;
 }
@@ -10121,8 +10121,36 @@ body.light .progress-wrap svg.progress-circle path {
   padding: 4px 4px 4px 8px;
 }
 .accordion .accordion-content p {
-  color: var(--color-white);
   text-align: right;
-  font-size: var(--font-size-12);
   flex-grow: 1;
+}
+.custom-upload {
+  background-color: #001952;
+  border: none;
+  margin: 15px 0;
+  color: #fff;
+  height: 45px;
+  border-radius: 6px;
+}
+
+.custom-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.custom-upload input[type="file"] {
+  display: none;
+}
+
+.tacbox {
+  display:block;
+  padding: .5rem 0;
+  margin: 10px 0;
 }
