@@ -7081,7 +7081,6 @@ main.single-product .product .gallery-items li img:hover {
 }
 
 .product .product-info .product-config-wrapper .product-directory ul li span {
-  font-size: 13px;
   color: #656565;
 }
 
@@ -10171,4 +10170,29 @@ body.light .progress-wrap svg.progress-circle path {
 #chartdiv {
   width: 100%;
   height: 500px;
+}
+.box-product {
+  display: flex;
+  align-items: center;
+}
+.box-product i {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: #545454 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-left: .5rem;
+  border: 1px solid #545454;
+  transition: all ease-in-out .3s;
+}
+
+.box-product i:hover{
+  background-color: #000;
+  color: #fff !important;
+}
+.box-product p  span{
+  font-size: 18px;
 }
